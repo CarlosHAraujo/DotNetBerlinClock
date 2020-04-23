@@ -61,7 +61,6 @@
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\FiveHoursLineProvider.cs" />
     <Compile Include="Classes\FiveMinutesLineProvider.cs" />
-    <Compile Include="Classes\ILineProvider.cs" />
     <Compile Include="Classes\OneHourLineProvider.cs" />
     <Compile Include="Classes\OneMinuteLineProvider.cs" />
     <Compile Include="Classes\SecondBlinkProvider.cs" />

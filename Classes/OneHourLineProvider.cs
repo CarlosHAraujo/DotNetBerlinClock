@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace BerlinClock.Classes
 {
 
-    public class OneHourLineProvider : ILineProvider
+    public class OneHourLineProvider
     {
         private const int factor = 5;
 

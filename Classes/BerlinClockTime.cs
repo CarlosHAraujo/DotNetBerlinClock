@@ -5,11 +5,11 @@ namespace BerlinClock.Classes
 {
     public class BerlinClockTime
     {
-        private readonly ILineProvider secondBlinkProvider;
-        private readonly ILineProvider fiveHoursProvider;
-        private readonly ILineProvider oneHourProvider;
-        private readonly ILineProvider fiveMinutesProvider;
-        private readonly ILineProvider oneMinuteProvider;
+        private readonly SecondBlinkProvider secondBlinkProvider;
+        private readonly FiveHoursLineProvider fiveHoursProvider;
+        private readonly OneHourLineProvider oneHourProvider;
+        private readonly FiveMinutesLineProvider fiveMinutesProvider;
+        private readonly OneMinuteLineProvider oneMinuteProvider;
 
         public BerlinClockTime(SecondBlinkProvider secondBlink, FiveHoursLineProvider fiveHours, OneHourLineProvider oneHour, FiveMinutesLineProvider fiveMinutes, OneMinuteLineProvider oneMinute)
         {

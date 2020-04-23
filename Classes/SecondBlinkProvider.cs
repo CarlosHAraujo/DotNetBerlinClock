@@ -3,7 +3,7 @@
 namespace BerlinClock.Classes
 {
 
-    public class SecondBlinkProvider : ILineProvider
+    public class SecondBlinkProvider
     {
         private const int factor = 2;
 

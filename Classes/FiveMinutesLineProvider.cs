@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace BerlinClock.Classes
 {
 
-    public class FiveMinutesLineProvider : ILineProvider
+    public class FiveMinutesLineProvider
     {
         private const int factor = 5;
         public string GetLamps(int time)

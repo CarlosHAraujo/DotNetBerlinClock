@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BerlinClock.Classes
 {
-    public class OneMinuteLineProvider : ILineProvider
+    public class OneMinuteLineProvider
     {
         private const int factor = 5;
 
