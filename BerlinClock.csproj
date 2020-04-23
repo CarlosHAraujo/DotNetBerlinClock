@@ -11,6 +11,8 @@
     <AssemblyName>BerlinClock</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,6 +40,9 @@
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,7 +55,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDD\BerlinClockFeatureSteps.cs" />
-    <Compile Include="Classes\BerlinClock.cs" />
+    <Compile Include="Classes\BerlinClockConverter.cs" />
+    <Compile Include="Classes\BerlinClockFormater.cs" />
+    <Compile Include="Classes\BerlinClockTime.cs" />
+    <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\FiveHoursLineProvider.cs" />
+    <Compile Include="Classes\FiveMinutesLineProvider.cs" />
+    <Compile Include="Classes\ILineProvider.cs" />
+    <Compile Include="Classes\OneHourLineProvider.cs" />
+    <Compile Include="Classes\OneMinuteLineProvider.cs" />
+    <Compile Include="Classes\SecondBlinkProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BDD\BerlinClockFeatureSteps.feature.cs">
       <AutoGen>True</AutoGen>
@@ -58,7 +72,11 @@
       <DependentUpon>BerlinClockFeatureSteps.feature</DependentUpon>
     </Compile>
     <Compile Include="Classes\ITimeConverter.cs" />
-    <Compile Include="Classes\TimeConverter.cs" />
+    <Compile Include="TDD\FiveHoursLineProviderTests.cs" />
+    <Compile Include="TDD\FiveMinutesLineProviderTests.cs" />
+    <Compile Include="TDD\OneHourLineProvider.cs" />
+    <Compile Include="TDD\OneMinuteLineProviderTests.cs" />
+    <Compile Include="TDD\SecondBlinkProviderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
