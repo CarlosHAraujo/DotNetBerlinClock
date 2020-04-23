@@ -72,11 +72,12 @@
       <DependentUpon>BerlinClockFeatureSteps.feature</DependentUpon>
     </Compile>
     <Compile Include="Classes\ITimeConverter.cs" />
-    <Compile Include="TDD\FiveHoursLineProviderTests.cs" />
-    <Compile Include="TDD\FiveMinutesLineProviderTests.cs" />
-    <Compile Include="TDD\OneHourLineProvider.cs" />
-    <Compile Include="TDD\OneMinuteLineProviderTests.cs" />
-    <Compile Include="TDD\SecondBlinkProviderTests.cs" />
+    <Compile Include="Unit Tests\BerlinClockTimeTests.cs" />
+    <Compile Include="Unit Tests\FiveHoursLineProviderTests.cs" />
+    <Compile Include="Unit Tests\FiveMinutesLineProviderTests.cs" />
+    <Compile Include="Unit Tests\OneHourLineProvider.cs" />
+    <Compile Include="Unit Tests\OneMinuteLineProviderTests.cs" />
+    <Compile Include="Unit Tests\SecondBlinkProviderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

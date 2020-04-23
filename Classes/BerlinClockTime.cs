@@ -34,6 +34,9 @@ namespace BerlinClock.Classes
         {
             value = value ?? throw new ArgumentNullException(nameof(value), "Please provide a value for the BerlinClock time.");
             string[] pieces = value.Split(':');
+            if (pieces.Length < 3)
+                throw new ArgumentException($"Unable to parse value {value} as Berlin Clock", nameof(value));
+
             if (!int.TryParse(pieces[0], out int hours))
                 throw new ArgumentOutOfRangeException(nameof(hours), $"Unable to extract hours out of the time {pieces[0]}");
             if (!int.TryParse(pieces[1], out int minutes))
