@@ -2,20 +2,18 @@
 {
     public class BerlinClockConverter : ITimeConverter
     {
-        private readonly BerlinClockFormater formater;
-        private readonly BerlinClockTime berlinClockTime;
+        private readonly BerlinClockTime _berlinClockTime;
 
         //Readiness for DI
-        public BerlinClockConverter(BerlinClockTime berlinClockTime, BerlinClockFormater formater)
+        public BerlinClockConverter(BerlinClockTime berlinClockTime)
         {
-            this.berlinClockTime = berlinClockTime;
-            this.formater = formater;
+            _berlinClockTime = berlinClockTime;
         }
 
         public string ConvertTime(string aTime)
         {
-            var time = berlinClockTime.Parse(aTime);
-            return formater.Format(time.Seconds, time.FiveHours, time.OneHour, time.FiveMinutes, time.OneMinute);
+            var time = _berlinClockTime.Parse(aTime);
+            return time.ToString();
         }
     }
 }

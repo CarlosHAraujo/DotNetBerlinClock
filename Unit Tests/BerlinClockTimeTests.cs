@@ -16,8 +16,8 @@ namespace BerlinClock.UnitTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void Should_Throw_ArgumentNullException_When_Time_Is_Null()
+        [ExpectedException(typeof(ArgumentException))]
+        public void Should_Throw_ArgumentException_When_Time_Is_Null()
         {
             clock.Parse(null);
         }
@@ -34,6 +34,13 @@ namespace BerlinClock.UnitTests
         public void Should_Throw_ArgumentException_When_Time_Is_Incorrect()
         {
             clock.Parse("24:");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Should_Throw_ArgumentException_When_Time_Is_Invalid()
+        {
+            clock.Parse("abc:123:xyz");
         }
     }
 }

@@ -10,14 +10,14 @@ namespace BerlinClock.UnitTests
         [TestMethod]
         public void Should_Have_All_LampsOff_When_Is_AMPM_Midnight()
         {
-            var provider = new OneHourLineProvider();
+            OneHourLineProvider provider = new();
             Assert.AreEqual("OOOO", provider.GetLamps(0));
         }
 
         [TestMethod]
         public void Should_Have_All_LampsOn_When_Is_24Midnight()
         {
-            var provider = new OneHourLineProvider();
+            OneHourLineProvider provider = new();
             Assert.AreEqual("RRRR", provider.GetLamps(24));
         }
 
@@ -25,7 +25,7 @@ namespace BerlinClock.UnitTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Should_Throw_OutOfRange_When_Time_Is_Greater_Than_Expected()
         {
-            var provider = new OneHourLineProvider();
+            OneHourLineProvider provider = new();
             _ = provider.GetLamps(25);
         }
 
@@ -33,7 +33,7 @@ namespace BerlinClock.UnitTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Should_Throw_OutOfRange_When_Time_Is_Negative()
         {
-            var provider = new OneHourLineProvider();
+            OneHourLineProvider provider = new();
             _ = provider.GetLamps(-1);
         }
     }

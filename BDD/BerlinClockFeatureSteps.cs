@@ -7,7 +7,7 @@ namespace BerlinClock
     [Binding]
     public class TheBerlinClockSteps
     {
-        private ITimeConverter berlinClock = new BerlinClockConverter(new BerlinClockTime(new SecondBlinkProvider(), new FiveHoursLineProvider(), new OneHourLineProvider(), new FiveMinutesLineProvider(), new OneMinuteLineProvider()), new BerlinClockFormater());
+        private ITimeConverter berlinClock = new BerlinClockConverter(new BerlinClockTime(new SecondBlinkProvider(), new FiveHoursLineProvider(), new OneHourLineProvider(), new FiveMinutesLineProvider(), new OneMinuteLineProvider()));
         private string theTime;
 
         
